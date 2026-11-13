@@ -1,0 +1,41 @@
+{
+  "name": "@k9o/kibo",
+  "version": "1.5.0",
+  "description": "Kibo - Zero-Knowledge BYOK/HYOK vault SDK. The vault client (secrets, wrapped data keys; composes into @k9o/core as client.kibo) plus standalone encrypt/decrypt against your own KMS, in WASM.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts"
+  },
+  "files": [
+    "src",
+    "wasm",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://kilimanjaro.dev",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k9o-platform",
+    "directory": "packages/kibo"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@k9o/core": "*"
+  },
+  "devDependencies": {
+    "bun-types": "^1.1.0",
+    "typescript": "^5.6.0"
+  }
+}
